@@ -1,7 +1,7 @@
 #ifndef BOARD_HPP
 #define BOARD_HPP
 
-
+#include <map>
 #include <string>
 
 enum Color{
@@ -22,6 +22,21 @@ enum Square {
     A7, B7, C7, D7, E7, F7, G7, H7,
     A8, B8, C8, D8, E8, F8, G8, H8,
 };
+
+const std::map<char, Piece> pieceMap = {
+        {'p', Piece::PAWN},
+        {'n', Piece::KNIGHT},
+        {'b', Piece::BISHOP},
+        {'r', Piece::ROOK},
+        {'q', Piece::QUEEN},
+        {'k', Piece::KING},
+        {'P', Piece::PAWN},
+        {'N', Piece::KNIGHT},
+        {'B', Piece::BISHOP},
+        {'R', Piece::ROOK},
+        {'Q', Piece::QUEEN},
+        {'K', Piece::KING}
+    };
 
 void printBoard();
 

@@ -3,9 +3,7 @@
 #include <fstream>
 #include <string>
 #include <map>
-#include <board.hpp>
-
-using namespace std;
+#include "board.hpp"
 
 int board[64];
 // int board[64] = {
@@ -34,20 +32,6 @@ void printBoard() {
 }
 
 void loadFromFenString(std::string filePath){
-    std::map<char, Piece> pieceMap {
-        {'p', Piece::PAWN},
-        {'n', Piece::KNIGHT},
-        {'b', Piece::BISHOP},
-        {'r', Piece::ROOK},
-        {'q', Piece::QUEEN},
-        {'k', Piece::KING},
-        {'P', Piece::PAWN},
-        {'N', Piece::KNIGHT},
-        {'B', Piece::BISHOP},
-        {'R', Piece::ROOK},
-        {'Q', Piece::QUEEN},
-        {'K', Piece::KING}
-    };
 
     std::ifstream file(filePath); // Replace with your file path
     std::string line;
@@ -92,7 +76,7 @@ void loadFromFenString(std::string filePath){
         }
     }
     printBoard();
-    cout << "Done" << line[lineIndex] << endl;
+   std::cout << "Done" << line[lineIndex] << std::endl;
 
 }
 
