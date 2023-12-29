@@ -1,3 +1,7 @@
 # ignore all files without an extension
 *
 !*.*
+
+
+# ignore vscode config file
+.vscode
